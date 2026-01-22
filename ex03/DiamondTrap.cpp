@@ -3,7 +3,6 @@
 
 DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap() {
   std::cout << "DiamondTrap: Default Constructor called!" << std::endl;
-  name = using ClapTrap::name;
 }
 
 DiamondTrap::DiamondTrap(std::string new_name)

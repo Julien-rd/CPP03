@@ -4,7 +4,7 @@
 
 int main()
 {
-    DiamondTrap mate("Sebastian");
+    DiamondTrap mate;
 
     mate.whoAmI();
     mate.attack("basti");
