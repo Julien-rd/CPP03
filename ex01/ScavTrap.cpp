@@ -16,12 +16,8 @@ ScavTrap::ScavTrap(std::string new_name) : ClapTrap(new_name) {
   attack_dmg = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) {
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
   std::cout << "ScavTrap: Copy Constructor has been called!" << std::endl;
-  name = other.name;
-  hit_pts = other.hit_pts;
-  energy_pts = other.energy_pts;
-  attack_dmg = other.attack_dmg;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
@@ -59,4 +55,10 @@ void ScavTrap::attack(const std::string &target) {
               << attack_dmg << " points of damage!" << std::endl;
     energy_pts--;
   }
+}
+
+void ScavTrap::print_params(void) const {
+  std::cout << "ScavTrap " << name << " has " << attack_dmg << " attack damage, "
+            << hit_pts << " hit points and " << energy_pts << " energy points !"
+            << std::endl;
 }

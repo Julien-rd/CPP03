@@ -15,6 +15,7 @@ public:
 
   void guardGate();
   void attack(const std::string &target);
+  virtual void print_params(void) const;
 };
 
 #endif
