@@ -17,12 +17,8 @@ FragTrap::FragTrap(std::string new_name) : ClapTrap(new_name) {
   attack_dmg = 30;
 }
 
-FragTrap::FragTrap(const FragTrap &other) {
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other) {
   std::cout << "FragTrap: Copy Constructor has been called!" << std::endl;
-  name = other.name;
-  hit_pts = other.hit_pts;
-  energy_pts = other.energy_pts;
-  attack_dmg = other.attack_dmg;
 }
 
 FragTrap::~FragTrap() {
@@ -45,7 +41,7 @@ void FragTrap::highFivesGuys(void) {
 }
 
 void FragTrap::print_params(void) const {
-  std::cout << "ClapTrap " << name << " has " << attack_dmg << "attack damage, "
+  std::cout << "ClapTrap " << name << " has " << attack_dmg << " attack damage, "
             << hit_pts << " hit points and " << energy_pts << " energy points !"
             << std::endl;
 }

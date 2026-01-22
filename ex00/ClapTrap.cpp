@@ -26,6 +26,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
   if (this != &other) {
     name = other.name;
     hit_pts = other.hit_pts;
+    std::cout << hit_pts << std::endl;
     energy_pts = other.energy_pts;
     attack_dmg = other.attack_dmg;
   }
@@ -75,4 +76,10 @@ void ClapTrap::beRepaired(unsigned int amount) {
     energy_pts--;
     hit_pts += amount;
   }
+}
+
+void ClapTrap::print_params(void) const {
+  std::cout << "ClapTrap " << name << " has " << attack_dmg << " attack damage, "
+            << hit_pts << " hit points and " << energy_pts << " energy points !"
+            << std::endl;
 }

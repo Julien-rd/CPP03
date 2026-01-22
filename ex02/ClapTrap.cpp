@@ -76,7 +76,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 }
 
 void ClapTrap::print_params(void) const {
-  std::cout << "ClapTrap " << name << " has " << attack_dmg << "attack damage, "
+  std::cout << "ClapTrap " << name << " has " << attack_dmg << " attack damage, "
             << hit_pts << " hit points and " << energy_pts << " energy points !"
             << std::endl;
 }
