@@ -41,7 +41,7 @@ void FragTrap::highFivesGuys(void) {
 }
 
 void FragTrap::print_params(void) const {
-  std::cout << "ClapTrap " << name << " has " << attack_dmg << " attack damage, "
+  std::cout << "FragTrap " << name << " has " << attack_dmg << " attack damage, "
             << hit_pts << " hit points and " << energy_pts << " energy points !"
             << std::endl;
 }
